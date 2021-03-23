@@ -9,7 +9,7 @@ Using the FreeRTOS, 2 tasks which are to blink an LED with different timings. Us
 <img src="https://github.com/mlhakimz/RealTimeSystems/blob/main/Example%201/Example1_Setup.jpg">
 </details>
 
-## Example 2 - Scheduler
+## Example 2 - Task Scheduler
 
 ## Example 3 - 
 
