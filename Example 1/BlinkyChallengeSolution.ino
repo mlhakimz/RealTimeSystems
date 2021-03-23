@@ -65,8 +65,6 @@ void setup() {
               0,            // Task priority (0 to configMAX_PRIORITIES - 1)
               NULL);
 
-  // If this was vanilla FreeRTOS, you'd want to call vTaskStartScheduler() in
-  // main after setting up your tasks.
 }
 
 void loop() {
