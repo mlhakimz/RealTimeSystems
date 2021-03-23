@@ -57,12 +57,12 @@ void setup() {
               NULL);
 
   // Task to run forever
-  xTaskCreatePinnedToCore(  // Use xTaskCreate() in vanilla FreeRTOS
+  xTaskCreate(  // Use xTaskCreate() in vanilla FreeRTOS
               toggleLED_2,  // Function to be called
               "Toggle 2",   // Name of task
               1024,         // Stack size (bytes in ESP32, words in FreeRTOS)
               NULL,         // Parameter to pass to function
-              1,            // Task priority (0 to configMAX_PRIORITIES - 1)
+              0,            // Task priority (0 to configMAX_PRIORITIES - 1)
               NULL);
 
   // If this was vanilla FreeRTOS, you'd want to call vTaskStartScheduler() in
