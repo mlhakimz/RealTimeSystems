@@ -17,7 +17,7 @@ static const BaseType_t app_cpu = 1;
 
 // LED rates
 static const int rate_1 = 500;  // ms
-static const int rate_2 = 323;  // ms
+static const int rate_2 = 300;  // ms
 
 // Pins
 static const int led_pin = LED_BUILTIN;
@@ -48,14 +48,13 @@ void setup() {
   pinMode(led_pin, OUTPUT);
 
   // Task to run forever
-  xTaskCreatePinnedToCore(  // Use xTaskCreate() in vanilla FreeRTOS
+  xTaskCreate(  // Use xTaskCreate() in vanilla FreeRTOS
               toggleLED_1,  // Function to be called
               "Toggle 1",   // Name of task
               1024,         // Stack size (bytes in ESP32, words in FreeRTOS)
               NULL,         // Parameter to pass to function
-              0,            // Task priority (0 to configMAX_PRIORITIES - 1)
-              NULL,         // Task handle
-              app_cpu);     // Run on one core for demo purposes (ESP32 only)
+              1,            // Task priority (0 to configMAX_PRIORITIES - 1)
+              NULL);
 
   // Task to run forever
   xTaskCreatePinnedToCore(  // Use xTaskCreate() in vanilla FreeRTOS
@@ -63,9 +62,8 @@ void setup() {
               "Toggle 2",   // Name of task
               1024,         // Stack size (bytes in ESP32, words in FreeRTOS)
               NULL,         // Parameter to pass to function
-              0,            // Task priority (0 to configMAX_PRIORITIES - 1)
-              NULL,         // Task handle
-              app_cpu);     // Run on one core for demo purposes (ESP32 only)
+              1,            // Task priority (0 to configMAX_PRIORITIES - 1)
+              NULL);
 
   // If this was vanilla FreeRTOS, you'd want to call vTaskStartScheduler() in
   // main after setting up your tasks.
