@@ -2,7 +2,7 @@
 
 ## Example 1 - Tasks
 
-Using the FreeRTOS, 2 tasks which are to blink an LED with different timings. Use xTaskCreate() instead of xTaskCreatePinnedToCore() since we're not using ESP-IDF.
+Using the FreeRTOS, run 2 tasks which are to toggle the built in LED with different timings, on one core.
 
 <details>
 <summary>Experimental Setup</summary>
@@ -10,6 +10,13 @@ Using the FreeRTOS, 2 tasks which are to blink an LED with different timings. Us
 </details>
 
 ## Example 2 - Task Scheduler
+
+Run 2 tasks in one core. One read user input to set new LED timings, another one blinks the LED according to the user input.
+
+<details>
+<summary>Experimental Setup</summary>
+<img src="https://github.com/mlhakimz/RealTimeSystems/blob/main/Example%202/Example2_Setup.jpg">
+</details>
 
 ## Example 3 - 
 
