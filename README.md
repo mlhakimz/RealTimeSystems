@@ -9,7 +9,7 @@ Using the FreeRTOS, run 2 tasks which are to toggle the built in LED with differ
 <img src="https://github.com/mlhakimz/RealTimeSystems/blob/main/Example%201/Example1_Setup.jpg">
 </details>
 
-## Example 2 - Task Scheduler
+## Example 2 - Task Scheduling
 
 Run 2 tasks in one core. One read user input to set new LED timings, another one blinks the LED according to the user input.
 
