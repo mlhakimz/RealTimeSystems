@@ -24,7 +24,7 @@ void toggleLED_1(void *parameter) {
   }
 }
 
-// Our task: blink an LED at another rate
+// Our task: Read serial input
 void ReadSerial(void *parameter) {
   while (1) {
     if (Serial.available() > 0) {
