@@ -20,6 +20,8 @@ Run 2 tasks in one core. One read user input to set new LED timings, another one
 
 ## Example 3 - Memory Management
 
+A simple serial input echo program, with optimized memory usage by using vPortFree after every serial input so that the heap memory does not build up and cause memory leak.
+
 ## Example 4 - Queue
 
 ## Example 5 - Mutex
