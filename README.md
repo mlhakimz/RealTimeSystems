@@ -32,7 +32,11 @@ Using mutex, the creation of a task is not disrupted by any other functions. In 
 
 ## Example 6 - Semaphore
 
+Using Semaphores and mutexes, the writing and reading data in a buffer is not disrupted and not repeated. The critical sections of the code (Serial, read & writing on buffer) such are protected by mutexes. The Semaphores make sure that the consumer tasks do not read the same data more than once, it only execute if the semaphores are released by the producer tasks.
+
 ## Example 7 - Software Timer
+
+Software timers are used to delay the execution of functions or carry out periodic operations. In this case, a timer is used to disable the backlight of an LCD (represented by the built in LED on the ESP32) after 5 seconds of inactivity.
 
 ## Example 8 - Hardware Interrupts
 
